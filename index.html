@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Metal Maniacs Welding and Fabrication - Quality craftsmanship you can trust. General welding, custom metal fabrication, equipment/trailer/gate repairs, structural & farm repairs, and mobile welding services."/>
+<meta name="keywords" content="welding, metal fabrication, mobile welding, equipment repair, trailer repair, gate repair, structural repair, farm repair, steel welding, stainless welding, aluminum welding, Portland TN"/>
+<meta name="author" content="Metal Maniacs Welding and Fabrication"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="index.html"/>
+<meta property="og:title" content="Metal Maniacs Welding and Fabrication"/>
+<meta property="og:description" content="Quality craftsmanship you can trust. General welding, custom metal fabrication, and mobile welding services."/>
+<meta property="og:image" content="images/hero.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Metal Maniacs Welding and Fabrication"/>
+<meta name="twitter:description" content="Quality craftsmanship you can trust. General welding, custom metal fabrication, and mobile welding services."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"/>
+<link rel="preload" as="image" href="images/hero.webp"/>
+<title>Metal Maniacs Welding and Fabrication</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Metal Maniacs Welding and Fabrication",
+  "description": "Quality craftsmanship you can trust. General welding, custom metal fabrication, equipment/trailer/gate repairs, structural & farm repairs, and mobile welding services.",
+  "telephone": "+1 615-922-0809",
+  "email": "metalmaniaccs@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Portland, TN",
+    "postalCode": "37148",
+    "addressLocality": "Portland",
+    "addressRegion": "TN",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    "Portland, TN", "Gallatin, TN", "Lebanon, TN", "Springfield, TN", "Cross Plains, TN",
+    "Westmoreland, TN", "Bowling Green, KY", "Cottontown, TN", "White House, TN", "Franklin, KY"
+  ]
+}
+</script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-beige': '#e8e4df',
+            'brand-dark': '#2c2c2c',
+            'brand-accent': '#d35400',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    html { scroll-behavior: smooth; }
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .fade-in-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .fade-in-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .scale-in.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-5px);
+    }
+    
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+    
+    #gallery img {
+      filter: contrast(1.03) brightness(1.01);
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      cursor: zoom-in;
+    }
+    
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .lightbox.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      transition: background 0.2s;
+    }
+    .lightbox-close:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 48px;
+      cursor: pointer;
+      padding: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      transition: background 0.2s;
+      user-select: none;
+    }
+    .lightbox-nav:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+    
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    .gallery-container {
+      cursor: grab;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .gallery-container:active {
+      cursor: grabbing;
+    }
+    .gallery-container.grabbing {
+      scroll-behavior: auto !important;
+    }
+
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+    .menu-btn { cursor: pointer; }
+    
+    .metal-section {
+      background-color: #2c2c2c;
+      background-image:
+        radial-gradient(circle at 15% 20%, rgba(211,84,0,0.12), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(211,84,0,0.08), transparent 50%),
+        radial-gradient(circle at 60% 0%, rgba(255,255,255,0.05), transparent 40%),
+        linear-gradient(180deg, #333333 0%, #232323 100%);
+    }
+    
+    .hazard-strip {
+      background: repeating-linear-gradient(
+        -45deg,
+        #d35400 0 10px,
+        transparent 10px 20px
+      );
+    }
+    
+    .plate {
+      position: relative;
+    }
+    .plate::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      box-shadow:
+        inset 4px 4px 0 -2px rgba(211,84,0,0.4),
+        inset -4px 4px 0 -2px rgba(211,84,0,0.4),
+        inset 4px -4px 0 -2px rgba(211,84,0,0.4),
+        inset -4px -4px 0 -2px rgba(211,84,0,0.4);
+    }
+  </style>
+</head>
+<body class="bg-brand-beige text-brand-dark font-sans selection:bg-brand-accent selection:text-white pt-16 md:pt-20">
+<a href="#about" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:bg-brand-dark focus:text-white focus:rounded">Skip to content</a>
+
+<header class="fixed top-0 w-full z-50 bg-brand-beige/90 backdrop-blur-md border-b border-black/5">
+<nav aria-label="Main navigation" class="container mx-auto px-6 py-4">
+<div class="max-w-6xl mx-auto flex items-center justify-between">
+<a class="flex items-center gap-2" href="#"><img alt="Metal Maniacs Welding and Fabrication" class="h-[52px] md:h-[62px] w-auto" src="images/logoo.png"/></a>
+<div class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a class="hover:text-brand-accent transition-colors" href="#about">About</a>
+<a class="hover:text-brand-accent transition-colors" href="#services">Services</a>
+<a class="hover:text-brand-accent transition-colors" href="#gallery">Gallery</a>
+<a class="px-5 py-2 bg-brand-dark text-white text-sm font-bold uppercase tracking-wider hover:bg-brand-accent transition-all" href="https://www.facebook.com/profile.php?id=61591958907002" target="_blank" rel="noopener noreferrer">Call Us</a>
+</div>
+<div class="flex md:hidden items-center gap-3">
+<a class="px-4 py-2 bg-brand-dark text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-accent transition-all" href="https://www.facebook.com/profile.php?id=61591958907002" target="_blank" rel="noopener noreferrer">Call Us</a>
+<button class="menu-btn w-10 h-10 flex items-center justify-center" onclick="toggleMenu()" aria-label="Toggle menu">
+<svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+</button>
+</div>
+</div>
+</nav>
+<div class="mobile-menu fixed top-0 right-0 w-64 h-full bg-brand-dark z-50 p-8 md:hidden">
+<div class="flex justify-end mb-8">
+<button class="text-white text-3xl" onclick="toggleMenu()">&times;</button>
+</div>
+<div class="flex flex-col gap-6 text-lg">
+<a class="text-white hover:text-brand-accent transition-colors" href="#about" onclick="toggleMenu()">About</a>
+<a class="text-white hover:text-brand-accent transition-colors" href="#services" onclick="toggleMenu()">Services</a>
+<a class="text-white hover:text-brand-accent transition-colors" href="#gallery" onclick="toggleMenu()">Gallery</a>
+<a class="mt-4 px-5 py-3 bg-brand-accent text-white text-sm font-bold uppercase tracking-wider text-center" href="https://www.facebook.com/profile.php?id=61591958907002" target="_blank" rel="noopener noreferrer" onclick="toggleMenu()">Call Us</a>
+</div>
+</header>
+
+<section class="relative h-[90vh] min-h-[480px] md:min-h-[600px] flex items-center justify-center text-center px-4 md:px-6 overflow-hidden" id="hero">
+<div class="absolute inset-0 z-0">
+<img alt="Metal Maniacs Welding and Fabrication" class="w-full h-full object-cover object-center scale-140 brightness-60" src="images/hero.webp" fetchpriority="high"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+<div class="relative z-10 max-w-3xl fade-in">
+  <h1 class="text-3xl sm:text-4xl md:text-6xl font-serif text-white mb-6 leading-tight drop-shadow-lg">Metal Maniacs Welding and Fabrication</h1>
+  <p class="text-white text-base md:text-lg mb-8 max-w-xl mx-auto drop-shadow-md">General welding, custom metal fabrication, and mobile services — steel, stainless, and aluminum. Locally owned, fairly priced, and built to last.</p>
+   <a class="inline-block px-8 py-3 bg-white text-black text-sm font-bold uppercase tracking-wider hover:bg-brand-accent hover:text-white transition-all duration-300 drop-shadow-md" href="tel:+16159220809">Call Us Today</a>
+</div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-16 md:py-20">
+<div class="container mx-auto px-6">
+<div class="max-w-6xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="fade-in-left">
+<img alt="Metal Maniacs Welding and Fabrication" class="w-full rounded-lg shadow-lg" src="images/about us.webp" loading="lazy"/>
+</div>
+<div class="space-y-6 fade-in-right">
+  <h3 class="text-xs uppercase tracking-widest text-brand-accent font-bold">About Us</h3>
+  <h2 class="text-3xl md:text-4xl font-serif">Metal Maniacs<br/>Welding and Fabrication</h2>
+  <p class="text-gray-600 leading-relaxed">Owner-operated and based in Portland, TN, Metal Maniacs Welding and Fabrication handles everything from one-off custom pieces to full structural repairs. We weld steel, stainless, and aluminum — and if you can't bring it to us, we'll bring the shop to you.</p>
+  <p class="text-gray-600 leading-relaxed">Serving Portland and the surrounding communities with fair pricing, fast turnaround, and honest work.</p>
+  <div class="flex flex-col gap-3 pt-2">
+    <div class="flex items-center gap-2">
+      <div class="w-2 h-2 bg-brand-accent rounded-full"></div>
+      <span class="text-sm">Nate Dyer, Owner</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="w-2 h-2 bg-brand-accent rounded-full"></div>
+      <span class="text-sm">615-922-0809</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="w-2 h-2 bg-brand-accent rounded-full"></div>
+      <span class="text-sm">metalmaniaccs@gmail.com</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="w-2 h-2 bg-brand-accent rounded-full"></div>
+      <span class="text-sm">Portland, TN 37148</span>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="services" class="relative py-16 md:py-20 metal-section overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 hazard-strip opacity-50"></div>
+<div class="absolute bottom-0 left-0 right-0 h-1.5 hazard-strip opacity-50"></div>
+<div class="container mx-auto px-6 relative">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-12 fade-in">
+  <h3 class="text-xs uppercase tracking-widest text-brand-accent font-bold">Our Services</h3>
+  <h2 class="text-3xl md:text-4xl font-serif mt-2 text-white">What We Do</h2>
+  <p class="text-neutral-400 mt-3 max-w-xl mx-auto text-sm md:text-base">From general welding to custom fabrication, equipment and farm repairs, and mobile on-site service — steel, stainless, and aluminum.</p>
+</div>
+<div class="services-container grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 items-stretch" id="services-container">
+  <div class="plate fade-in hover-lift transition-transform duration-300 stagger-1 bg-gradient-to-b from-neutral-800 to-neutral-950 border border-white/10 rounded-lg p-5 md:p-6 flex flex-col items-center text-center overflow-hidden">
+  <span class="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-brand-accent to-transparent opacity-70"></span>
+    <div class="w-14 h-14 mb-3 bg-brand-dark border border-brand-accent/40 rounded-lg flex items-center justify-center shrink-0">
+      <svg class="w-7 h-7 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+    </div>
+    <h3 class="text-sm md:text-base font-serif mb-1 leading-snug text-white">General Welding</h3>
+  </div>
+  <div class="plate fade-in hover-lift transition-transform duration-300 stagger-2 bg-gradient-to-b from-neutral-800 to-neutral-950 border border-white/10 rounded-lg p-5 md:p-6 flex flex-col items-center text-center overflow-hidden">
+  <span class="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-brand-accent to-transparent opacity-70"></span>
+    <div class="w-14 h-14 mb-3 bg-brand-dark border border-brand-accent/40 rounded-lg flex items-center justify-center shrink-0">
+      <svg class="w-7 h-7 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+    </div>
+    <h3 class="text-sm md:text-base font-serif mb-1 leading-snug text-white">Custom Metal Fabrication</h3>
+  </div>
+  <div class="plate fade-in hover-lift transition-transform duration-300 stagger-3 bg-gradient-to-b from-neutral-800 to-neutral-950 border border-white/10 rounded-lg p-5 md:p-6 flex flex-col items-center text-center overflow-hidden">
+  <span class="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-brand-accent to-transparent opacity-70"></span>
+    <div class="w-14 h-14 mb-3 bg-brand-dark border border-brand-accent/40 rounded-lg flex items-center justify-center shrink-0">
+      <svg class="w-7 h-7 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+    </div>
+    <h3 class="text-sm md:text-base font-serif mb-1 leading-snug text-white">Equipment, Trailer & Gate Repairs</h3>
+  </div>
+  <div class="plate fade-in hover-lift transition-transform duration-300 stagger-4 bg-gradient-to-b from-neutral-800 to-neutral-950 border border-white/10 rounded-lg p-5 md:p-6 flex flex-col items-center text-center overflow-hidden">
+  <span class="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-brand-accent to-transparent opacity-70"></span>
+    <div class="w-14 h-14 mb-3 bg-brand-dark border border-brand-accent/40 rounded-lg flex items-center justify-center shrink-0">
+      <svg class="w-7 h-7 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+    </div>
+    <h3 class="text-sm md:text-base font-serif mb-1 leading-snug text-white">Structural & Farm Repairs</h3>
+  </div>
+  <div class="plate fade-in hover-lift transition-transform duration-300 stagger-1 bg-gradient-to-b from-neutral-800 to-neutral-950 border border-white/10 rounded-lg p-5 md:p-6 flex flex-col items-center text-center overflow-hidden">
+  <span class="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-brand-accent to-transparent opacity-70"></span>
+    <div class="w-14 h-14 mb-3 bg-brand-dark border border-brand-accent/40 rounded-lg flex items-center justify-center shrink-0">
+      <svg class="w-7 h-7 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+    </div>
+    <h3 class="text-sm md:text-base font-serif mb-1 leading-snug text-white">Mobile Welding</h3>
+  </div>
+  <div class="plate fade-in hover-lift transition-transform duration-300 stagger-2 bg-gradient-to-b from-neutral-800 to-neutral-950 border border-white/10 rounded-lg p-5 md:p-6 flex flex-col items-center text-center overflow-hidden">
+  <span class="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-brand-accent to-transparent opacity-70"></span>
+    <div class="w-14 h-14 mb-3 bg-brand-dark border border-brand-accent/40 rounded-lg flex items-center justify-center shrink-0">
+      <svg class="w-7 h-7 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    </div>
+    <h3 class="text-sm md:text-base font-serif mb-1 leading-snug text-white">Steel/Stainless/Aluminum</h3>
+  </div>
+  <div class="plate fade-in hover-lift transition-transform duration-300 stagger-3 bg-gradient-to-b from-neutral-800 to-neutral-950 border border-white/10 rounded-lg p-5 md:p-6 flex flex-col items-center text-center overflow-hidden">
+  <span class="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-brand-accent to-transparent opacity-70"></span>
+    <div class="w-14 h-14 mb-3 bg-brand-dark border border-brand-accent/40 rounded-lg flex items-center justify-center shrink-0">
+      <svg class="w-7 h-7 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
+    </div>
+    <h3 class="text-sm md:text-base font-serif mb-1 leading-snug text-white">Farm &amp; Equipment Repairs</h3>
+  </div>
+  <div class="plate fade-in hover-lift transition-transform duration-300 stagger-4 bg-gradient-to-b from-neutral-800 to-neutral-950 border border-white/10 rounded-lg p-5 md:p-6 flex flex-col items-center text-center overflow-hidden">
+  <span class="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-brand-accent to-transparent opacity-70"></span>
+    <div class="w-14 h-14 mb-3 bg-brand-dark border border-brand-accent/40 rounded-lg flex items-center justify-center shrink-0">
+      <svg class="w-7 h-7 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+    </div>
+    <h3 class="text-sm md:text-base font-serif mb-1 leading-snug text-white">On-Site Welding</h3>
+  </div>
+</div>
+<div class="text-center mt-10 fade-in">
+  <a class="inline-block px-8 py-3 bg-brand-accent text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-brand-dark transition-all" href="tel:+16159220809">Call Us</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="gallery" class="py-16 md:py-20 bg-brand-beige">
+  <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12 fade-in">
+        <h3 class="text-xs uppercase tracking-widest text-brand-accent font-bold">Gallery</h3>
+        <h2 class="text-3xl md:text-4xl font-serif mt-2">Our Work</h2>
+      </div>
+      <div class="gallery-container grid grid-cols-2 gap-4 md:flex md:gap-8 md:overflow-x-auto md:pb-4 scrollbar-hide px-4" id="gallery-container">
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 fade-in scale-in stagger-1" onclick="openLightbox(0)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/504969061_122239938314078004_3878765983588490541_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-2" onclick="openLightbox(1)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/524270266_122250898556078004_8069588099636973236_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-3" onclick="openLightbox(2)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/537111548_122255889278078004_6719212874006970201_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-1" onclick="openLightbox(3)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/537697914_122255889266078004_6720256392245550017_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-2" onclick="openLightbox(4)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/546625863_122260167260078004_4831624753572772388_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-3" onclick="openLightbox(5)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/566217064_122267102378078004_8582754141662952712_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-1" onclick="openLightbox(6)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/583341789_122272225646078004_791809658307284971_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-2" onclick="openLightbox(7)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/644094461_122293846400078004_6802230225215598897_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-3" onclick="openLightbox(8)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/651225938_122296306766078004_5149128188681430394_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-1" onclick="openLightbox(9)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/674925033_122302162568078004_1384859881193065047_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-2" onclick="openLightbox(10)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/745981475_122316774650078004_4663253881955277765_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-3" onclick="openLightbox(11)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/749566893_122317498934078004_638836049680426970_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-1" onclick="openLightbox(12)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/756790536_122319100928078004_3520247293752597001_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-2" onclick="openLightbox(13)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/756857798_122319100736078004_2125078948053798092_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-3" onclick="openLightbox(14)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/756989968_122319100964078004_2487678155331054207_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-1" onclick="openLightbox(15)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758304963_122319100538078004_1812887357157071126_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-2" onclick="openLightbox(16)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758356838_122319100658078004_5466527010131155474_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-3" onclick="openLightbox(17)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758368306_122319100796078004_3524605644015175540_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-1" onclick="openLightbox(18)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758377245_122319100940078004_4564652046322229927_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-2" onclick="openLightbox(19)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758481060_122319100712078004_8622678169487594917_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-1" onclick="openLightbox(20)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758501662_122319288074078004_2374353678781488264_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-2" onclick="openLightbox(21)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758543545_122319100688078004_4611640748975806815_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-3" onclick="openLightbox(22)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758543545_122319100784078004_5783555808100383326_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-1" onclick="openLightbox(23)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758553861_122319100670078004_6398694776233630069_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-2" onclick="openLightbox(24)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758677194_122319100700078004_3536563663043631792_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-3" onclick="openLightbox(25)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758793575_122319100808078004_7994021540038918975_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-1" onclick="openLightbox(26)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758997098_122319100904078004_319144056649227406_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-2" onclick="openLightbox(27)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/759688738_122319100766078004_4713000646218083254_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-3" onclick="openLightbox(28)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/762466508_122319965048078004_7863698352162050326_n.webp" loading="lazy"/>
+        </div>
+        <div class="group cursor-pointer md:flex-shrink-0 md:w-64 lg:w-80 xl:w-96 snap-start fade-in scale-in stagger-1" onclick="openLightbox(29)">
+          <img alt="Our Work" class="w-full h-48 md:h-56 lg:h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/758350389_122319100628078004_1844219314832586261_n.wbp.webp" loading="lazy"/>
+        </div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="py-16 md:py-20">
+<div class="container mx-auto px-6">
+<div class="max-w-6xl mx-auto">
+<div class="bg-brand-accent rounded-2xl p-8 md:p-12 relative overflow-hidden">
+<div class="absolute right-0 top-0 opacity-10">
+<svg height="300" viewbox="0 0 100 100" width="300" aria-hidden="true"><circle cx="50" cy="50" fill="white" r="50"></circle></svg>
+</div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="text-white">
+  <h2 class="text-3xl md:text-4xl font-serif mb-4">Get a Free Estimate</h2>
+  <p class="text-white/90 mb-8">Call or message us today for a no-obligation quote. We'll discuss your project, provide on-site consultation if needed, and give you a detailed estimate — fast.</p>
+  <a class="inline-block px-8 py-3 bg-white text-black text-sm font-bold uppercase tracking-wider hover:bg-brand-dark hover:text-white transition-all duration-300" href="tel:+16159220809">Call 615-922-0809</a>
+</div>
+<div class="bg-white rounded-lg p-6">
+  <h3 class="text-lg font-serif mb-4">Why Choose Us</h3>
+  <div class="space-y-3 text-sm text-gray-600">
+    <p><strong class="text-brand-dark">Locally owned.</strong> Based in Portland, TN and proud to serve our neighbors across Middle Tennessee and Southern Kentucky.</p>
+    <p><strong class="text-brand-dark">Fair pricing.</strong> No surprises, no hidden fees — just honest quotes and quality work.</p>
+    <p><strong class="text-brand-dark">Fast turnaround.</strong> We show up on time and get the job done right.</p>
+    <p><strong class="text-brand-dark">Mobile service.</strong> Can't bring it to us? We'll bring the equipment to you.</p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-brand-dark text-white py-8">
+<div class="container mx-auto px-6">
+<div class="max-w-6xl mx-auto">
+<div class="flex flex-col items-center gap-6">
+<a href="#"><img alt="Metal Maniacs Welding and Fabrication" class="h-[52px] w-auto" src="images/logoo.png"/></a>
+<div class="border-t border-white/10 w-full pt-6">
+<p class="text-center text-xs text-gray-500">© 2026 Metal Maniacs Welding and Fabrication. All rights reserved.</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+<div id="menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden" onclick="toggleMenu()"></div>
+
+<script>
+    function toggleMenu() {
+      document.querySelector('.mobile-menu').classList.toggle('open');
+      document.getElementById('menu-overlay').classList.toggle('hidden');
+      document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, observerOptions);
+      document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .scale-in').forEach(el => observer.observe(el));
+
+      const cookieBanner = document.getElementById('cookie-banner');
+      const cookieConsent = localStorage.getItem('cookieConsent');
+      
+      if (cookieBanner && !cookieConsent) {
+        cookieBanner.classList.remove('hidden');
+      }
+      
+      // Gallery carousel (desktop only): auto-scroll + drag to scroll
+      const gallery = document.getElementById('gallery-container');
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+      let scrollInterval = null;
+      let isAutoScrolling = window.innerWidth >= 768;
+      let galleryVisible = false;
+
+      function canAutoScroll() {
+        if (!gallery || !isAutoScrolling || !galleryVisible || isDown) return false;
+        return gallery.scrollWidth > gallery.clientWidth + 4;
+      }
+
+      function startAutoScroll() {
+        stopAutoScroll();
+        if (!canAutoScroll()) return;
+        scrollInterval = setInterval(() => {
+          if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth - 2) {
+            gallery.scrollLeft = 0;
+          }
+          gallery.scrollLeft += 1.5;
+        }, 15);
+      }
+
+      function stopAutoScroll() {
+        if (scrollInterval) clearInterval(scrollInterval);
+        scrollInterval = null;
+      }
+
+      // Only auto-scroll while the gallery is on screen
+      if ('IntersectionObserver' in window) {
+        const galleryObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            galleryVisible = entry.isIntersecting;
+            if (galleryVisible) startAutoScroll();
+            else stopAutoScroll();
+          });
+        }, { threshold: 0.15 });
+        galleryObserver.observe(gallery);
+      }
+
+      // Restart once lazy images finish loading and make it scrollable
+      gallery.querySelectorAll('img').forEach(img => {
+        img.addEventListener('load', () => startAutoScroll());
+      });
+
+      // Pause while hovering (desktop)
+      gallery.addEventListener('mouseenter', stopAutoScroll);
+      gallery.addEventListener('mouseleave', () => startAutoScroll());
+
+      // Drag to scroll (desktop mouse)
+      gallery.addEventListener('mousedown', (e) => {
+        if (window.innerWidth < 768) return;
+        isDown = true;
+        stopAutoScroll();
+        gallery.classList.add('grabbing');
+        startX = e.pageX - gallery.offsetLeft;
+        scrollLeft = gallery.scrollLeft;
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (!isDown) return;
+        isDown = false;
+        gallery.classList.remove('grabbing');
+        startAutoScroll();
+      });
+
+      gallery.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - gallery.offsetLeft;
+        gallery.scrollLeft = scrollLeft - (x - startX) * 2;
+      });
+
+      // Pause auto-scroll while touching, but never hijack native scrolling
+      gallery.addEventListener('touchstart', stopAutoScroll, { passive: true });
+      gallery.addEventListener('touchend', () => startAutoScroll(), { passive: true });
+      gallery.addEventListener('touchcancel', () => startAutoScroll(), { passive: true });
+
+      // Keep auto-scroll working across resizes / orientation changes
+      window.addEventListener('resize', () => {
+        isAutoScrolling = window.innerWidth >= 768;
+        if (isAutoScrolling && galleryVisible) startAutoScroll();
+        else stopAutoScroll();
+      });
+    });
+
+    function acceptCookies() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+    
+    function rejectCookies() {
+      localStorage.setItem('cookieConsent', 'rejected');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    // Lightbox
+    const galleryImages = [
+      'images/504969061_122239938314078004_3878765983588490541_n.webp',
+      'images/524270266_122250898556078004_8069588099636973236_n.webp',
+      'images/537111548_122255889278078004_6719212874006970201_n.webp',
+      'images/537697914_122255889266078004_6720256392245550017_n.webp',
+      'images/546625863_122260167260078004_4831624753572772388_n.webp',
+      'images/566217064_122267102378078004_8582754141662952712_n.webp',
+      'images/583341789_122272225646078004_791809658307284971_n.webp',
+      'images/644094461_122293846400078004_6802230225215598897_n.webp',
+      'images/651225938_122296306766078004_5149128188681430394_n.webp',
+      'images/674925033_122302162568078004_1384859881193065047_n.webp',
+      'images/745981475_122316774650078004_4663253881955277765_n.webp',
+      'images/749566893_122317498934078004_638836049680426970_n.webp',
+      'images/756790536_122319100928078004_3520247293752597001_n.webp',
+      'images/756857798_122319100736078004_2125078948053798092_n.webp',
+      'images/756989968_122319100964078004_2487678155331054207_n.webp',
+      'images/758304963_122319100538078004_1812887357157071126_n.webp',
+      'images/758356838_122319100658078004_5466527010131155474_n.webp',
+      'images/758368306_122319100796078004_3524605644015175540_n.webp',
+      'images/758377245_122319100940078004_4564652046322229927_n.webp',
+      'images/758481060_122319100712078004_8622678169487594917_n.webp',
+      'images/758501662_122319288074078004_2374353678781488264_n.webp',
+      'images/758543545_122319100688078004_4611640748975806815_n.webp',
+      'images/758543545_122319100784078004_5783555808100383326_n.webp',
+      'images/758553861_122319100670078004_6398694776233630069_n.webp',
+      'images/758677194_122319100700078004_3536563663043631792_n.webp',
+      'images/758793575_122319100808078004_7994021540038918975_n.webp',
+      'images/758997098_122319100904078004_319144056649227406_n.webp',
+      'images/759688738_122319100766078004_4713000646218083254_n.webp',
+      'images/762466508_122319965048078004_7863698352162050326_n.webp',
+      'images/758350389_122319100628078004_1844219314832586261_n.wbp.webp'
+    ];
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = galleryImages[index];
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function nextImage(e) {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      document.getElementById('lightbox-img').src = galleryImages[currentIndex];
+    }
+
+    function prevImage(e) {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      document.getElementById('lightbox-img').src = galleryImages[currentIndex];
+    }
+
+    document.addEventListener('keydown', function(e) {
+      const lightbox = document.getElementById('lightbox');
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextImage(e);
+      if (e.key === 'ArrowLeft') prevImage(e);
+    });
+</script>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span class="lightbox-nav lightbox-prev" onclick="prevImage(event)">&#8249;</span>
+  <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Enlarged image" onclick="event.stopPropagation()"/>
+  <span class="lightbox-nav lightbox-next" onclick="nextImage(event)">&#8250;</span>
+</div>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-brand-dark text-white p-4 z-[60] hidden">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="text-sm text-center md:text-left">This website uses cookies to improve your experience. <a href="cookies.html" class="underline hover:text-brand-accent">More info</a></p>
+    <div class="flex gap-3">
+      <button onclick="rejectCookies()" class="px-4 py-2 border border-white/30 text-sm hover:bg-white/10 transition-colors">Decline</button>
+      <button onclick="acceptCookies()" class="px-4 py-2 bg-brand-accent text-white text-sm font-bold hover:bg-brand-accent/80 transition-colors">Accept</button>
+    </div>
+  </div>
+</div>
+</body></html>
