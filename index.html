@@ -293,7 +293,28 @@
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="fade-in-left">
-            <img alt="On-Time Welding Services" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="images/about%20me.webp" loading="lazy"/>
+            <div class="relative w-full aspect-[4/3] overflow-hidden rounded-lg shadow-lg select-none group" id="before-after-slider">
+              <!-- After Image -->
+              <img src="images/after.webp" alt="After Repair" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+              <!-- After Label Badge -->
+              <span class="absolute top-4 right-4 bg-brand-accent/90 text-white text-xs font-bold uppercase px-3 py-1 rounded backdrop-blur-sm tracking-wider pointer-events-none transition-opacity duration-200" id="after-badge">After</span>
+
+              <!-- Before Image -->
+              <img src="images/before.webp" alt="Before Repair" class="absolute inset-0 w-full h-full object-cover pointer-events-none" id="before-image" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);" />
+              <!-- Before Label Badge -->
+              <span class="absolute top-4 left-4 bg-brand-dark/80 text-white text-xs font-bold uppercase px-3 py-1 rounded backdrop-blur-sm tracking-wider pointer-events-none transition-opacity duration-200" id="before-badge">Before</span>
+
+              <!-- Drag Handle Line and Button -->
+              <div class="absolute inset-y-0 pointer-events-none z-10" id="slider-line" style="left: 50%;">
+                <div class="absolute inset-y-0 w-0.5 bg-white/80 shadow-md"></div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white border-2 border-brand-accent rounded-full flex items-center justify-center shadow-lg cursor-ew-resize text-brand-dark group-hover:scale-110 transition-transform duration-300">
+                  <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l-4 3 4 3m8-6l4 3-4 3"/></svg>
+                </div>
+              </div>
+
+              <!-- Range Input overlay to handle drag/touch inputs -->
+              <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" id="slider-input" aria-label="Before and after slider" />
+            </div>
           </div>
           <div class="space-y-6 fade-in-right">
             <h3 class="text-xs uppercase tracking-widest text-brand-accent font-bold">About Me</h3>
@@ -516,6 +537,23 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+      // Before-After Slider Logic
+      const sliderInput = document.getElementById('slider-input');
+      const beforeImage = document.getElementById('before-image');
+      const sliderLine = document.getElementById('slider-line');
+      const beforeBadge = document.getElementById('before-badge');
+      const afterBadge = document.getElementById('after-badge');
+
+      if (sliderInput && beforeImage && sliderLine) {
+        sliderInput.addEventListener('input', function() {
+          const val = this.value;
+          beforeImage.style.clipPath = `polygon(0 0, ${val}% 0, ${val}% 100%, 0 100%)`;
+          sliderLine.style.left = `${val}%`;
+          beforeBadge.style.opacity = val < 15 ? val / 15 : 1;
+          afterBadge.style.opacity = val > 85 ? (100 - val) / 15 : 1;
+        });
+      }
+
       const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
